@@ -6,8 +6,8 @@ import time
 
 class WhatsappBot:
     def __init__(self):
-        self.mensagem = 'This is robot. I´m learning Selenium!'
-        self.grupos = ["Amor <3"]
+        self.mensagem = 'This is robot. I´m learning Selenium!' # Menssagem
+        self.grupos = ["Amor <3"] # Contatos
         options = webdriver.ChromeOptions()
         options.add_argument('lang=pt-br')
         self.browser = webdriver.Chrome(executable_path=r'./chromedriver.exe')

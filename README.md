@@ -1,2 +1,2 @@
-# RPA
-Robot Process Automation using python
+# Python Web
+Web scrapping + Flask + Django web applications using python

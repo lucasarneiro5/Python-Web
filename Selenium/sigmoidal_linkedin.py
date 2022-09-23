@@ -22,13 +22,11 @@ driver.find_element_by_xpath('/html/body/nav/div/a[2]').click()
 
 # Digitar usuario
 user_input = driver.find_element_by_name('session_key')
-user_input.send_keys('lavieira@kpmg.com.br')
-#user_input.send_keys('emailfake@gmail.com')
+user_input.send_keys('emailfake@gmail.com')
 
 # Digitar senha
 password_input = driver.find_element_by_name('session_password')
-password_input.send_keys('Pentiumd5!')
-#password_input.send_keys('SuaSenha')
+password_input.send_keys('SuaSenha')
 
 # Apertar o "Enter"
 password_input.send_keys(Keys.RETURN)
@@ -52,13 +50,13 @@ for perfil in links:
     time.sleep(4)
 
     response = Selector(text=driver.page_source)
-    print(response)
-    """nome = response.xpath("//title/text()").extract_first().split(" | ")[0]
+    #print(response)
+    nome = response.xpath("//title/text()").extract_first().split(" | ")[0]
     headline = response.xpath('//h2/text()')[1].extract().strip()
     url_perfil = driver.current_url
 
     # Escrever no csv
-    writer.writerow([nome, headline, url_perfil])"""
+    writer.writerow([nome, headline, url_perfil])
 
 # Sair do driver
 driver.quit()
